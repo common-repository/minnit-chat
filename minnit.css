@@ -1,0 +1,179 @@
+minnit-container {
+  position: fixed;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  border: 0;
+  width: 25%;
+  z-index: 2147483647;
+  box-sizing: border-box;
+  max-height: 90%;
+  max-height: 90vh;
+}
+
+minnit-container[data-size="button"] {
+  height: 70px;
+  width: 70px;
+}
+
+minnit-container[data-size="1"] {
+  min-height: 400px;
+  height: 60%;
+  width: 25%;
+}
+
+minnit-container[data-size="2"] {
+  min-height: 400px;
+  width: 50%;
+  height: 60%;
+}
+
+minnit-container[data-size="3"] {
+  min-height: 400px;
+  width: 75%;
+  height: 60%;
+}
+
+
+minnit-container[data-placement="minnitPlacementR"] {
+  left: initial;
+  right: 0;
+}
+
+minnit-close-chat {
+  display: block;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-family: "Arial", Arial, sans-serif;
+  text-transform: none;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  border-left: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+  border-top: 1px solid #aaaaaa;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  z-index: 99;
+  line-height: 1 !important;
+  box-sizing: border-box;
+}
+
+.minnit-chat-iframe {
+  display: inline-block;
+  height: calc(100% - 100px);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  position: relative;
+  padding: 0;
+}
+
+minnit-container[data-placement="minnitPlacementR"] .minnit-chat-iframe {
+  right: 16px;
+}
+
+minnit-container[data-placement="minnitPlacementL"] .minnit-chat-iframe {
+  left: 16px;
+}
+
+.minnit-chat-iframe-gutenberg-block {
+  max-width: 100%;
+  min-height: 300px;
+  max-height: 98vh;
+  display: block;
+}
+
+minnit-chat {
+  margin: auto;
+}
+
+@media only screen and (max-width: 900px) {
+
+  minnit-container[data-size="1"],
+  minnit-container[data-size="2"],
+  minnit-container[data-size="3"] {
+    width: 95vw;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+
+  minnit-container[data-size="1"],
+  minnit-container[data-size="2"],
+  minnit-container[data-size="3"] {
+    height: 95vh;
+    max-height: 95vh;
+  }
+
+  .minnit-chat-iframe {
+    height:calc(100% - 90px);
+  }
+}
+
+minnit-button {
+  min-width: 20px;
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  z-index: 99;
+  max-height: 100%;
+  bottom: 2px;
+  position: absolute;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+
+minnit-button:active {
+  opacity: 0.4;
+}
+
+minnit-button svg {
+  border-radius: 100px;
+}
+
+minnit-button.active svg {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+
+minnit-container[data-placement="minnitPlacementR"] minnit-button {
+  right: 4px;
+}
+
+minnit-container[data-placement="minnitPlacementL"] minnit-button {
+  left: 4px;
+}
+
+@media only screen and (max-width: 500px) {
+
+  minnit-container[data-size="small"],
+  minnit-container[data-size="medium"],
+  minnit-container[data-size="large"] {
+    width: 100%;
+    height: 80%;
+  }
+}
+
+@media only screen and (min-height: 800px) {
+
+  minnit-container[data-size="small"],
+  minnit-container[data-size="medium"],
+  minnit-container[data-size="large"] {
+    height: 80%;
+    opacity: 0.5;
+  }
+}
